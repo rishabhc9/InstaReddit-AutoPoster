@@ -81,7 +81,7 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
 
 ## GUI
 
-<img width="853" alt="Screenshot 2024-08-31 at 2 41 32 PM" src="https://github.com/user-attachments/assets/1c4aa389-e31d-47e7-bcb1-9eb5990fd559">
+<img width="848" alt="Screenshot 2024-08-31 at 2 46 00 PM" src="https://github.com/user-attachments/assets/49515cef-75c2-4488-9499-ced72fbe69e7">
 
 
 
