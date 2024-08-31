@@ -49,30 +49,21 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
     "user_agent": "your_reddit_user_agent",
     "username": "your_reddit_username",
     "password": "your_reddit_password"
-  },
-  "subreddits": [
-    "dankmemes",
-    "IndianCelebScene",
-    "SaimanSays",
-    "dankinindia",
-    "Indiangirlsontinder",
-    "CricketShitpost",
-    "IndianStockMarket",
-    "bollywood",
-    "BollywoodRealism",
-    "BollyBlindsNGossip"
-  ]
+  }
 }
 ``` 
-
-
-4. **Run the script:**
-
-``` bash
-python app.py
-# or
-python gui_app.py
+4. **Create a Subreddit Names File: Prepare a .txt file with subreddit names, one per line or comma-separated.**
+```bash
+dankmemes,dankinindia,
 ```
+
+5. **Run the script:**
+
+   ``` bash
+   python app.py
+   # or
+   python gui_app.py
+   ```
 
 ## Usage:
 
