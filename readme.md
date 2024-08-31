@@ -7,7 +7,7 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
 ## Features
 
 - **Load Credentials**: Input Instagram and Reddit credentials from a JSON file.
-- **Select Subreddits**: Choose a file containing subreddit names.
+- **Select Subreddits**: Specify your favourite subreddits.
 - **Set Posting Interval**: Define the interval between posts in hours.
 - **Automatic Hashtag Scraping**: Scrapes hashtags based on the selected subreddit name and includes them in the Instagram post captions.
 - **Post Automation**: Automatically fetches images from Reddit subreddits and posts them to Instagram.
@@ -35,7 +35,7 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
     ```bash
     pip install -r requirements.txt
     ```
-3. **Create a credentials.json file with the following structure:**
+3. **Create a config.json file with the following structure:**
 
 ```bash
 {
@@ -49,15 +49,24 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
     "user_agent": "your_reddit_user_agent",
     "username": "your_reddit_username",
     "password": "your_reddit_password"
-  }
+  },
+  "subreddits": [
+    "dankmemes",
+    "IndianCelebScene",
+    "SaimanSays",
+    "dankinindia",
+    "Indiangirlsontinder",
+    "CricketShitpost",
+    "IndianStockMarket",
+    "bollywood",
+    "BollywoodRealism",
+    "BollyBlindsNGossip"
+  ]
 }
 ``` 
-4. **Create a Subreddit Names File: Prepare a .txt file with subreddit names, one per line or comma-separated.**
-```bash
-dankmemes,dankinindia,
-```
 
-5. **Run the script:**
+
+4. **Run the script:**
 
 ``` bash
 python app.py
@@ -69,13 +78,11 @@ python gui_app.py
 
 1. Load Credentials File: Click the "Browse" button next to "Credentials File (.json)" and select your credentials.json file.
 
-2. Select Subreddit Names File: Click the "Browse" button next to "Subreddit Names File (.txt)" and select your subreddit names file.
+2. Set Posting Interval: Enter the interval between posts in hours.
 
-3. Set Posting Interval: Enter the interval between posts in hours.
+3. Start Posting: Click the "Run" button to start the posting process. The tool will begin fetching images from the selected subreddits and uploading them to Instagram at the specified interval.
 
-4. Start Posting: Click the "Run" button to start the posting process. The tool will begin fetching images from the selected subreddits and uploading them to Instagram at the specified interval.
-
-5. Check Status: The status label at the bottom of the GUI will provide updates on the posting process, including any errors or confirmation messages.
+4. Check Status: The status label at the bottom of the GUI will provide updates on the posting process, including any errors or confirmation messages.
 
 
 ###

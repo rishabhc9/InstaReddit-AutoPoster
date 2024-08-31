@@ -1,0 +1,18 @@
+{
+  "instagram": {
+    "username": "your_instagram_username",
+    "password": "your_instagram_password"
+  },
+  "reddit": {
+    "client_id": "your_reddit_client_id",
+    "client_secret": "your_reddit_client_secret",
+    "user_agent": "your_reddit_user_agent",
+    "username": "your_reddit_username",
+    "password": "your_reddit_password"
+  },
+  "subreddits": [
+    "dankmemes",
+    "CricketShitpost"
+
+  ]
+}
