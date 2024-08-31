@@ -24,7 +24,7 @@ class InstagramPosterApp:
         tk.Button(root, text="Browse", command=self.load_config_file).grid(row=0, column=2, padx=10, pady=5)
         
         # Interval
-        tk.Label(root, text="Posting Interval (In hours)").grid(row=1, column=0, padx=10, pady=5, sticky='w')
+        tk.Label(root, text="Posting Interval (In minutes)").grid(row=1, column=0, padx=10, pady=5, sticky='w')
         self.interval_entry = tk.Entry(root, width=10)
         self.interval_entry.grid(row=1, column=1, padx=10, pady=5, sticky='w')
 
@@ -53,16 +53,16 @@ class InstagramPosterApp:
     
     def start_posting(self):
         config_file = self.config_file_entry.get()
-        interval_hours = self.interval_entry.get()
+        interval_minutes = self.interval_entry.get()
         hashtag_word = self.hashtag_word_entry.get().strip()
         
-        if not config_file or not interval_hours:
+        if not config_file or not interval_minutes:
             self.status_label.config(text="Please fill in all fields.", fg="red")
             return
 
         try:
-            interval_hours = float(interval_hours)
-            if interval_hours <= 0:
+            interval_minutes = float(interval_minutes)
+            if interval_minutes <= 0:
                 raise ValueError
         except ValueError:
             self.status_label.config(text="Interval must be a positive number.", fg="red")
@@ -79,7 +79,7 @@ class InstagramPosterApp:
         self.root.update()
 
         # Start the posting process in a separate thread
-        threading.Thread(target=self.run_posting_process, args=(interval_hours, hashtag_word), daemon=True).start()
+        threading.Thread(target=self.run_posting_process, args=(interval_minutes, hashtag_word), daemon=True).start()
 
     def initialize_bot_and_reddit(self, config_file):
         # Load credentials and subreddits from config file
@@ -108,7 +108,7 @@ class InstagramPosterApp:
         # Load subreddits
         self.subreddits = config.get("subreddits", [])
 
-    def run_posting_process(self, interval_hours, hashtag_word):
+    def run_posting_process(self, interval_minutes, hashtag_word):
         uploaded = []
         if os.path.exists("data.txt"):
             with open("data.txt", "r") as myfile:
@@ -189,8 +189,8 @@ class InstagramPosterApp:
                             if success:
                                 self.update_status("Posting Completed successfully", "green")
                                 time.sleep(5)
-                                self.update_status(f"Sleeping for {interval_hours} hours", "purple")
-                                time.sleep(interval_hours * 3600)
+                                self.update_status(f"Sleeping for {interval_minutes} minutes", "purple")
+                                time.sleep(interval_minutes * 60)
                         except Exception as e:
                             print(e)
             delete_config_folder()
