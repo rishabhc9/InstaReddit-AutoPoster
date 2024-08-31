@@ -49,7 +49,12 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
        "user_agent": "your_reddit_user_agent",
        "username": "your_reddit_username",
        "password": "your_reddit_password"
-     }
+     },
+   "subreddits": [
+    "subreddit1",
+    "subreddit2",
+    "subreddit3"
+  ]
    }
    ``` 
 4. **Create a Subreddit Names File: Prepare a .txt file with subreddit names, one per line or comma-separated.**
