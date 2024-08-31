@@ -1,0 +1,5 @@
+instabot==0.7.0
+praw==7.7.0
+requests==2.28.2
+beautifulsoup4==4.12.2
+Pillow==9.4.0
