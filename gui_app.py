@@ -27,13 +27,18 @@ class InstagramPosterApp:
         tk.Label(root, text="Posting Interval (In hours)").grid(row=1, column=0, padx=10, pady=5, sticky='w')
         self.interval_entry = tk.Entry(root, width=10)
         self.interval_entry.grid(row=1, column=1, padx=10, pady=5, sticky='w')
-        
+
+        # Hashtag Word
+        tk.Label(root, text="Keyword to Generate Hashtags (optional)").grid(row=2, column=0, padx=10, pady=5, sticky='w')
+        self.hashtag_word_entry = tk.Entry(root, width=50)
+        self.hashtag_word_entry.grid(row=2, column=1, padx=10, pady=5, sticky='w')
+
         # Run Button
-        tk.Button(root, text="Run", command=self.start_posting).grid(row=2, column=0, columnspan=3, pady=10)
+        tk.Button(root, text="Run", command=self.start_posting).grid(row=3, column=0, columnspan=3, pady=10)
         
         # Status Label
         self.status_label = tk.Label(root, text="", fg="purple")
-        self.status_label.grid(row=3, column=0, columnspan=3, pady=10)
+        self.status_label.grid(row=4, column=0, columnspan=3, pady=10)
 
         # Initialize bot and Reddit client
         self.bot = None
@@ -49,6 +54,7 @@ class InstagramPosterApp:
     def start_posting(self):
         config_file = self.config_file_entry.get()
         interval_hours = self.interval_entry.get()
+        hashtag_word = self.hashtag_word_entry.get().strip()
         
         if not config_file or not interval_hours:
             self.status_label.config(text="Please fill in all fields.", fg="red")
@@ -73,7 +79,7 @@ class InstagramPosterApp:
         self.root.update()
 
         # Start the posting process in a separate thread
-        threading.Thread(target=self.run_posting_process, args=(interval_hours,), daemon=True).start()
+        threading.Thread(target=self.run_posting_process, args=(interval_hours, hashtag_word), daemon=True).start()
 
     def initialize_bot_and_reddit(self, config_file):
         # Load credentials and subreddits from config file
@@ -102,7 +108,7 @@ class InstagramPosterApp:
         # Load subreddits
         self.subreddits = config.get("subreddits", [])
 
-    def run_posting_process(self, interval_hours):
+    def run_posting_process(self, interval_hours, hashtag_word):
         uploaded = []
         if os.path.exists("data.txt"):
             with open("data.txt", "r") as myfile:
@@ -116,7 +122,11 @@ class InstagramPosterApp:
         delete_config_folder()
 
         def upload(link, title):
-            url = f"https://best-hashtags.com/hashtag/{subreddit_name}/"
+            if hashtag_word:
+                url = f"https://best-hashtags.com/hashtag/{hashtag_word}/"
+            else:
+                url = f"https://best-hashtags.com/hashtag/{subreddit_name}/"
+            
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
             p1_tags = soup.find_all('p1')
