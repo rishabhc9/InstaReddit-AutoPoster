@@ -36,7 +36,6 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
     pip install -r requirements.txt
     ```
 3. **Create a config.json file with the following structure:**
-
    ```bash
    {
      "instagram": {
@@ -77,6 +76,12 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
 3. Start Posting: Click the "Run" button to start the posting process. The tool will begin fetching images from the selected subreddits and uploading them to Instagram at the specified interval.
 
 4. Check Status: The status label at the bottom of the GUI will provide updates on the posting process, including any errors or confirmation messages.
+
+## Useful Links
+
+1. https://old.reddit.com/prefs/apps/
+
+2. https://github.com/ohld/igbot
 
 
 ## GUI
