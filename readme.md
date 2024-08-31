@@ -37,25 +37,25 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
     ```
 3. **Create a config.json file with the following structure:**
 
-```bash
-{
-  "instagram": {
-    "username": "your_instagram_username",
-    "password": "your_instagram_password"
-  },
-  "reddit": {
-    "client_id": "your_reddit_client_id",
-    "client_secret": "your_reddit_client_secret",
-    "user_agent": "your_reddit_user_agent",
-    "username": "your_reddit_username",
-    "password": "your_reddit_password"
-  }
-}
-``` 
+   ```bash
+   {
+     "instagram": {
+       "username": "your_instagram_username",
+       "password": "your_instagram_password"
+     },
+     "reddit": {
+       "client_id": "your_reddit_client_id",
+       "client_secret": "your_reddit_client_secret",
+       "user_agent": "your_reddit_user_agent",
+       "username": "your_reddit_username",
+       "password": "your_reddit_password"
+     }
+   }
+   ``` 
 4. **Create a Subreddit Names File: Prepare a .txt file with subreddit names, one per line or comma-separated.**
-```bash
-dankmemes,dankinindia,
-```
+   ```bash
+   dankmemes,dankinindia,
+   ```
 
 5. **Run the script:**
 
