@@ -15,7 +15,7 @@ import time
 class InstagramPosterApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Reddit Instagram Auto Poster")
+        self.root.title("InstaReddit AutoPoster")
         
         # Config File
         tk.Label(root, text="Config File (.json)").grid(row=0, column=0, padx=10, pady=5, sticky='w')
