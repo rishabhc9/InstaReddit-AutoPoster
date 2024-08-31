@@ -8,7 +8,7 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
 
 - **Load Credentials**: Input Instagram and Reddit credentials from a JSON file.
 - **Select Subreddits**: Specify your favourite subreddits.
-- **Set Posting Interval**: Define the interval between posts in hours.
+- **Set Posting Interval**: Define the interval between posts in minutes.
 - **Automatic Hashtag Scraping**: Scrapes hashtags based on the selected subreddit name/ specified keyword and includes them in the Instagram post captions.
 - **Post Automation**: Automatically fetches images from Reddit subreddits and posts them to Instagram.
 - **Error Handling**: Provides status updates and error messages on the GUI.
@@ -72,7 +72,7 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
 
 1. Load Credentials File: Click the "Browse" button next to "Credentials File (.json)" and select your credentials.json file.
 
-2. Set Posting Interval: Enter the interval between posts in hours.
+2. Set Posting Interval: Enter the interval between posts in minutes (Eg. 10,20,30).
 
 3. Start Posting: Click the "Run" button to start the posting process. The tool will begin fetching images from the selected subreddits and uploading them to Instagram at the specified interval.
 
