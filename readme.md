@@ -9,7 +9,7 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
 - **Load Credentials**: Input Instagram and Reddit credentials from a JSON file.
 - **Select Subreddits**: Specify your favourite subreddits.
 - **Set Posting Interval**: Define the interval between posts in hours.
-- **Automatic Hashtag Scraping**: Scrapes hashtags based on the selected subreddit name and includes them in the Instagram post captions.
+- **Automatic Hashtag Scraping**: Scrapes hashtags based on the selected subreddit name/ specified keyword and includes them in the Instagram post captions.
 - **Post Automation**: Automatically fetches images from Reddit subreddits and posts them to Instagram.
 - **Error Handling**: Provides status updates and error messages on the GUI.
 
