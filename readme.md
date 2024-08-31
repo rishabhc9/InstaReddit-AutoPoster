@@ -53,7 +53,8 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
       "subreddits": [
        "subreddit1",
        "subreddit2",
-       "subreddit3"]
+       "subreddit3"
+   ]
    }
    
    ``` 
