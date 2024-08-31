@@ -52,12 +52,10 @@ Introducing **InstaReddit AutoPoster** – the ultimate tool to effortlessly boo
   }
 }
 ``` 
-4. **Create a Subreddit Names File:**
+4. **Create a Subreddit Names File: Prepare a .txt file with subreddit names, one per line or comma-separated.**
 ```bash
 dankmemes,dankinindia,
 ```
-Prepare a .txt file with subreddit names, one per line or comma-separated.
-Usage
 
 5. **Run the script:**
 
